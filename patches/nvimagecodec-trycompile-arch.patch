@@ -1,0 +1,17 @@
+diff --git a/external/nvImageCodec/cmake/CUDA_utils.cmake b/external/nvImageCodec/cmake/CUDA_utils.cmake
+index 15a382d..9af389b 100644
+--- a/external/nvImageCodec/cmake/CUDA_utils.cmake
++++ b/external/nvImageCodec/cmake/CUDA_utils.cmake
+@@ -96,9 +96,12 @@ function(CUDA_check_cudacc_flag out_status compiler flags)
+     # Use try_compile to check the flag
+     # This actually attempts to compile a tiny file with the flag, which is the
+     # most reliable way to verify support.
++    # LFS local hack: pin an explicit arch so the try_compile child config
++    # does not fall back to 'native' GPU detection (fails under MSVC 14.50).
+     try_compile(compilation_result
+       SOURCES "${source_file}"
+       CMAKE_FLAGS -DCOMPILE_DEFINITIONS="${flags}"
++                  -DCMAKE_CUDA_ARCHITECTURES=61
+                   )
+ 
+     # Save the result to the cache and return it.

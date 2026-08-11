@@ -4,13 +4,13 @@
 
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue.svg)](LICENSE)
 
-**🌐 语言:** [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja-JP.md) · [한국어](README.ko-KR.md)
+**语言:** [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja-JP.md) · [한국어](README.ko-KR.md)
 
 [LichtFeld Studio](https://github.com/MrNeRF/LichtFeld-Studio)（3D 高斯泼溅）的自编译多架构 Windows 版，**支持从 Pascal（GTX 10 系列，SM 6.1）到 Blackwell（RTX 50 系列，SM 12.0）的全部 NVIDIA 显卡世代**。
 
 官方二进制只内置 `sm_75+`（Turing 及以上）的 CUDA 内核，Pascal 显卡（GTX 10 系列）加载内核即失败并静默退出。本版本编译了 6 个架构的胖二进制，让全线 NVIDIA 显卡都能运行——训练、渲染、Vulkan 可视化全部可用。
 
-## ⚠️ 许可证与合规声明（GPL-3.0）
+## 许可证与合规声明（GPL-3.0）
 
 - 本软件是 **GPL-3.0 开源项目 [MrNeRF/LichtFeld-Studio](https://github.com/MrNeRF/LichtFeld-Studio)（v0.4.2）的衍生作品**，依据 GPL-3.0-or-later 许可分发。
 - **对应源码**：
@@ -19,13 +19,13 @@
 - 完整许可证见 [LICENSE](LICENSE)，第三方依赖许可见 [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)。
 - 版权归 LichtFeld Studio Authors 所有，本仓库作者对修改部分负责。
 
-## 📥 下载
+## 下载
 
 见 [Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) 页面：`LichtFeld-Studio-MultiArch.zip`（约 1.2GB，含全部运行时 DLL 和 10 种语言包）。
 
 **运行要求**：Windows 10/11 64 位、NVIDIA 驱动 ≥ 570（CUDA 12.8+）。
 
-## 🚀 快速开始
+## 快速开始
 
 ```bash
 unzip LichtFeld-Studio-MultiArch.zip
@@ -33,7 +33,7 @@ cd LichtFeld-Studio-MultiArch
 ./LichtFeld-Studio.exe
 ```
 
-## 🎮 支持的显卡
+## 支持的显卡
 
 | SM | 架构 | 代表显卡 | 份额（Steam 2026-07） |
 |----|------|---------|----------------------|
@@ -48,13 +48,13 @@ cd LichtFeld-Studio-MultiArch
 
 > **注意**：AMD 和 Intel 显卡**不支持**。源码是 CUDA-only；移植到 AMD（HIP）需要 1 周以上工作量，Intel 目前没有完整的 3DGS 训练实现。
 
-## 🌍 多语言界面
+## 多语言界面
 
 界面内置 **10 种完整语言**（每种 2049 个翻译键）：中文(zh)、日本語(ja)、한국어(ko)、English(en)、Deutsch(de)、Español(es)、Français(fr)、Italiano(it)、Nederlands(nl)、Polski(pl)。
 
 **想要更多语言？** 只需在 `resources/locales/` 目录放一个新的 JSON 文件即可——格式见 [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md)。
 
-## 🛠️ 源码构建
+## 源码构建
 
 要求：Windows + VS Build Tools（含 C++ 和 Clang）、CUDA Toolkit 12.8、CMake 3.31+、vcpkg（完整克隆）。
 
@@ -83,7 +83,7 @@ build_multi_arch.bat
 
 产物：`build/LichtFeld-Studio.exe`（约 150-250MB 胖二进制）。
 
-## 📋 已验证
+## 已验证
 
 - ✅ sm_61 内核编译并运行（GTX 1070，驱动 582.66）
 - ✅ Vulkan 1.4 渲染、MCP 服务器、Python 插件系统全部正常

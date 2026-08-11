@@ -1,0 +1,13 @@
+--- /c/tmp/meson-1.9.0/mesonbuild/compilers/detect.py	2025-08-25 00:24:15.000000000 +0800
++++ E:/vcpkg/downloads/tools/meson-1.9.0-4452e3/mesonbuild/compilers/detect.py	2026-08-11 05:47:56.600324900 +0800
+@@ -429,7 +429,9 @@
+             else:
+                 target = 'unknown target'
+             cls = c.ClangClCCompiler if lang == 'c' else cpp.ClangClCPPCompiler
+-            linker = guess_win_linker(env, ['lld-link'], cls, version, for_machine)
++            # LFS local hack: resolve lld-link next to clang-cl (vcpkg build env lacks it on PATH)
++            _lfs_lld = os.path.join(os.path.dirname(compiler[0]), 'lld-link.exe')
++            linker = guess_win_linker(env, [_lfs_lld], cls, version, for_machine)
+             return cls(
+                 compiler, version, for_machine, is_cross, info, target,
+                 linker=linker)

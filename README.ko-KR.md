@@ -4,13 +4,13 @@
 
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/License-GPL--3.0--or--later-blue.svg)](LICENSE)
 
-**🌐 언어:** [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja-JP.md) · [한국어](README.ko-KR.md)
+**언어:** [English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja-JP.md) · [한국어](README.ko-KR.md)
 
 [LichtFeld Studio](https://github.com/MrNeRF/LichtFeld-Studio)(3D Gaussian Splatting)의 자체 컴파일 멀티 아키텍처 Windows 빌드입니다. **Pascal(GTX 10 시리즈, SM 6.1)부터 Blackwell(RTX 50 시리즈, SM 12.0)까지 모든 NVIDIA GPU 세대를 지원**합니다.
 
 공식 바이너리는 `sm_75+`(Turing 이상) CUDA 커널만 포함하고 있어, Pascal(GTX 10 시리즈)에서는 커널 로딩에 실패하고 조용히 종료됩니다. 이 빌드는 6개 아키텍처의 팻 바이너리를 컴파일하여 전 라인의 NVIDIA GPU에서 트레이닝·렌더링·Vulkan 비주얼라이제이션이 모두 작동합니다.
 
-## ⚠️ 라이선스 및 준수 사항 (GPL-3.0)
+## 라이선스 및 준수 사항 (GPL-3.0)
 
 - 본 소프트웨어는 **GPL-3.0 오픈소스 프로젝트 [MrNeRF/LichtFeld-Studio](https://github.com/MrNeRF/LichtFeld-Studio)(v0.4.2)의 파생 저작물**이며, GPL-3.0-or-later 라이선스로 배포됩니다.
 - **대응 소스코드**:
@@ -19,13 +19,13 @@
 - 전체 라이선스: [LICENSE](LICENSE), 서드파티 라이선스: [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
 - 저작권은 LichtFeld Studio Authors에 있으며, 이 저장소의 저자는 수정 부분에 대해 책임을 집니다.
 
-## 📥 다운로드
+## 다운로드
 
 [Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) 페이지의 `LichtFeld-Studio-MultiArch.zip`(약 1.2GB, 전체 런타임 DLL 및 10개 언어팩 포함).
 
 **요구 사항**: Windows 10/11 64비트, NVIDIA 드라이버 ≥ 570 (CUDA 12.8+).
 
-## 🚀 빠른 시작
+## 빠른 시작
 
 ```bash
 unzip LichtFeld-Studio-MultiArch.zip
@@ -33,7 +33,7 @@ cd LichtFeld-Studio-MultiArch
 ./LichtFeld-Studio.exe
 ```
 
-## 🎮 지원 GPU
+## 지원 GPU
 
 | SM | 아키텍처 | GPU | 점유율 (Steam 2026-07) |
 |----|---------|-----|------------------------|
@@ -48,13 +48,13 @@ cd LichtFeld-Studio-MultiArch
 
 > **참고**: AMD·Intel GPU는 **미지원**입니다. 소스가 CUDA 전용이며, AMD(HIP) 이식에는 1주 이상, Intel에는 완전한 3DGS 트레이닝 구현이 현재 없습니다.
 
-## 🌍 다국어 UI
+## 다국어 UI
 
 UI에는 **10개 언어의 완전한 번역**(각 2,049키)이 포함: 中文(zh)、日本語(ja)、한국어(ko)、English(en)、Deutsch(de)、Español(es)、Français(fr)、Italiano(it)、Nederlands(nl)、Polski(pl).
 
 **다른 언어가 필요하신가요?** `resources/locales/` 디렉토리에 새 JSON 파일을 넣기만 하면 됩니다. 키 형식은 [docs/TRANSLATIONS.md](docs/TRANSLATIONS.md) 참조.
 
-## 🛠️ 소스에서 빌드
+## 소스에서 빌드
 
 요구 사항: Windows + VS Build Tools(C++ 및 Clang 포함), CUDA Toolkit 12.8, CMake 3.31+, vcpkg(전체 클론).
 
@@ -83,12 +83,12 @@ build_multi_arch.bat
 
 산출물: `build/LichtFeld-Studio.exe`(약 150-250MB 팻 바이너리).
 
-## 📋 검증 완료
+## 검증 완료
 
 - ✅ sm_61 커널 컴파일 및 실행(GTX 1070, 드라이버 582.66)
 - ✅ Vulkan 1.4 렌더링, MCP 서버, Python 플러그인 시스템 모두 정상
 - ⚠️ Pascal 성능: Tensor Core 미탑재, 트레이닝 속도는 RTX 40 시리즈의 약 1/10~1/20
 
-## 🙏 감사의 글
+## 감사의 글
 
 [MrNeRF/LichtFeld-Studio](https://github.com/MrNeRF/LichtFeld-Studio) — 업스트림 GPL-3.0 프로젝트

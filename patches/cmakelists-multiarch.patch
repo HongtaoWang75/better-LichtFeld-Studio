@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c540318..64c61be 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -601,7 +601,9 @@ target_compile_definitions(glm::glm INTERFACE GLM_FORCE_DEPTH_ZERO_TO_ONE)
+ 
+ # TORCH_CUDA_ARCH_LIST is already defined by Torch
+ # use it here as the global default CUDA architecture list too
+-if(LichtFeld-Studio_CUDA_ARCH)
++# LFS local hack: only apply the default when the user did not pass
++# -DCMAKE_CUDA_ARCHITECTURES explicitly (multi-arch fat binary builds).
++if(LichtFeld-Studio_CUDA_ARCH AND NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
+     set(CMAKE_CUDA_ARCHITECTURES "${LichtFeld-Studio_CUDA_ARCH}" CACHE STRING "CUDA architectures" FORCE)
+ endif()
+ 

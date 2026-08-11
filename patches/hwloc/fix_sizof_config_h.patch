@@ -1,0 +1,19 @@
+--- a/include/hwloc/autogen/config.h.in
++++ b/include/hwloc/autogen/config.h.in
+@@ -86,4 +86,16 @@
+ /* The hwloc symbol prefix in all caps */
+ #undef HWLOC_SYM_PREFIX_CAPS
+
++/* The size of `unsigned long', as computed by sizeof. */
++#undef SIZEOF_UNSIGNED_LONG
++
++/* The size of `unsigned int', as computed by sizeof. */
++#undef SIZEOF_UNSIGNED_INT
++
++/* The size of `unsigned long', as computed by sizeof. */
++#undef HWLOC_SIZEOF_UNSIGNED_LONG
++
++/* The size of `unsigned int', as computed by sizeof. */
++#undef HWLOC_SIZEOF_UNSIGNED_INT
++
+ #endif /* HWLOC_CONFIG_H */

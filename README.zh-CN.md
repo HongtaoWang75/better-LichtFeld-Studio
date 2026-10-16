@@ -21,7 +21,10 @@
 
 ## 下载
 
-见 [Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) 页面：`LichtFeld-Studio-MultiArch.zip`（约 1.2GB，含全部运行时 DLL 和 10 种语言包）。
+见 [Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) 页面：
+
+- **安装包（推荐）**：`better-LichtFeld-Studio-Setup-0.4.2.1.exe`（约 740MB）—— 来自 [v0.4.2.1 发布页](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases/tag/v0.4.2.1)
+- **绿色版 zip**：`LichtFeld-Studio-MultiArch.zip`（约 1.2GB，含全部运行时 DLL 和 10 种语言包）
 
 **运行要求**：Windows 10/11 64 位、NVIDIA 驱动 ≥ 570（CUDA 12.8+）。
 
@@ -92,3 +95,4 @@ build_multi_arch.bat
 ## 🙏 致谢
 
 [MrNeRF/LichtFeld-Studio](https://github.com/MrNeRF/LichtFeld-Studio) — 上游 GPL-3.0 项目
+

@@ -21,7 +21,10 @@ The official binaries only ship `sm_75+` (Turing and newer) CUDA kernels, so Pas
 
 ## Download
 
-See the [Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) page: `LichtFeld-Studio-MultiArch.zip` (~1.2GB, includes all runtime DLLs and 10 language packs).
+See the [Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) page:
+
+- **Installer (recommended):** `better-LichtFeld-Studio-Setup-0.4.2.1.exe` (~740 MB) — from the [v0.4.2.1 release](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases/tag/v0.4.2.1)
+- **Portable zip:** `LichtFeld-Studio-MultiArch.zip` (~1.2 GB, includes all runtime DLLs and 10 language packs)
 
 **Requirements:** Windows 10/11 64-bit, NVIDIA driver ≥ 570 (CUDA 12.8+).
 
@@ -92,3 +95,4 @@ Output: `build/LichtFeld-Studio.exe` (~150-250MB fat binary).
 ## Credits
 
 [MrNeRF/LichtFeld-Studio](https://github.com/MrNeRF/LichtFeld-Studio) — upstream GPL-3.0 project
+

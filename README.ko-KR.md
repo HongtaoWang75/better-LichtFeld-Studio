@@ -21,7 +21,10 @@
 
 ## 다운로드
 
-[Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) 페이지의 `LichtFeld-Studio-MultiArch.zip`(약 1.2GB, 전체 런타임 DLL 및 10개 언어팩 포함).
+[Releases](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases) 페이지:
+
+- **설치 프로그램 (권장)**: `better-LichtFeld-Studio-Setup-0.4.2.1.exe` (약 740MB) — [v0.4.2.1 릴리스](https://github.com/HongtaoWang75/better-LichtFeld-Studio/releases/tag/v0.4.2.1)에서
+- **포터블 zip**: `LichtFeld-Studio-MultiArch.zip` (약 1.2GB, 전체 런타임 DLL 및 10개 언어팩 포함)
 
 **요구 사항**: Windows 10/11 64비트, NVIDIA 드라이버 ≥ 570 (CUDA 12.8+).
 
@@ -92,3 +95,4 @@ build_multi_arch.bat
 ## 감사의 글
 
 [MrNeRF/LichtFeld-Studio](https://github.com/MrNeRF/LichtFeld-Studio) — 업스트림 GPL-3.0 프로젝트
+
